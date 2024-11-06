@@ -1,0 +1,19 @@
+from connection import get_connection
+from mysql.connector import errorcode
+
+
+def addbooks(bname : str, bauthor : str, genre : str):
+    """function to add books to the database 
+    Args:
+    bname: name of the boook
+    bauthor: author of the book
+    genre: genre of book"""
+    conn = get_connection()
+    cur = conn.cursor()
+    #testing pending....
+    try:
+        cur.execute(f"INSERT INTO BOOKS VALUES({bname}, {bauthor}, {bauthor}, {1})")
+    except errorcode:
+        value = cur.execute(f"SELECT IN_STOCK FROM BOOKS WHERE B_NAME = '{bname}'")
+        new_value = int(value) + 1
+        cur.execute(f"UPDATE TABLE BOOKS WHERE B_NAME = '{bname}' SET IN_STOCK = '{new_value}'")
