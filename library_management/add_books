@@ -1,19 +1,32 @@
 from connection import get_connection
 from mysql.connector import errorcode
+import mysql.connector
 
 
-def addbooks(bname : str, bauthor : str, genre : str):
-    """function to add books to the database 
+def addbooks(bname : str, bauthor : str, genre : str, nob=1):
+    """function to add books to the database.
+    if the book exists in database the nob is added to the existing stock
     Args:
     bname: name of the boook
     bauthor: author of the book
-    genre: genre of book"""
+    genre: genre of book
+    nob: no. of books"""
     conn = get_connection()
     cur = conn.cursor()
-    #testing pending....
     try:
-        cur.execute(f"INSERT INTO BOOKS VALUES({bname}, {bauthor}, {bauthor}, {1})")
-    except errorcode:
-        value = cur.execute(f"SELECT IN_STOCK FROM BOOKS WHERE B_NAME = '{bname}'")
-        new_value = int(value) + 1
-        cur.execute(f"UPDATE TABLE BOOKS WHERE B_NAME = '{bname}' SET IN_STOCK = '{new_value}'")
+        cur.execute("INSERT INTO BOOKS VALUES(%s,%s,%s,%s)",(bname,bauthor,genre,nob))
+        conn.commit()
+    except mysql.connector.Error as err:
+        if err.errno == errorcode.ER_DUP_ENTRY:
+            cur.execute("SELECT IN_STOCK FROM BOOKS WHERE B_NAME = %s",(bname,))
+            current_stock = cur.fetchone()
+            new_stock = int(current_stock[0]) + nob
+            cur.execute("UPDATE BOOKS SET IN_STOCK = %s WHERE B_NAME = %s",(new_stock, bname))
+            conn.commit()
+        else:
+            print(f"Integrity error: {err}")
+    except mysql.connector.Error as err:
+        print(f"Database error: {err}")
+    finally:
+        conn.close()
+        cur.close()
