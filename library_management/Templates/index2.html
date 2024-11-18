@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibraryHub - Modern Library Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index2.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-brand">
+                <span class="logo">📚</span>
+                <span>LibraryHub</span>
+            </a>
+            <div class="nav-links">
+                <a href="#" class="nav-link">Search</a>
+                <a href="#" class="nav-link">Books</a>
+                <a href="#" class="nav-link">Account</a>
+                <button class="btn btn-primary">Sign In</button>
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Your Gateway to <span class="highlight">Knowledge</span></h1>
+                        <p>Discover thousands of books in our collection. Easy to browse, borrow, and manage.</p>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">10K+</span>
+                                <span class="stat-label">Books</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Categories</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Access</span>
+                            </div>
+                        </div>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary">Browse Collection</button>
+                            <button class="btn btn-secondary">View Categories</button>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=600" 
+                             alt="Library Collection">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-section">
+            <div class="container">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search for books, authors, or genres...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="search-tags">
+                    <button class="tag">Fiction</button>
+                    <button class="tag">Science</button>
+                    <button class="tag">History</button>
+                    <button class="tag">Biography</button>
+                    <button class="tag">Technology</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="books-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Available Books</h2>
+                    <select class="category-select">
+                        <option>All Categories</option>
+                        <option>Fiction</option>
+                        <option>Non-Fiction</option>
+                        <option>Science</option>
+                        <option>History</option>
+                    </select>
+                </div>
+                <div class="book-grid">
+                    <div class="book-card">
+                        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=400" 
+                             alt="The Midnight Library" class="book-image">
+                        <div class="book-info">
+                            <h3 class="book-title">The Midnight Library</h3>
+                            <p class="book-author">by Matt Haig</p>
+                            <span class="book-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=400" 
+                             alt="Atomic Habits" class="book-image">
+                        <div class="book-info">
+                            <h3 class="book-title">Atomic Habits</h3>
+                            <p class="book-author">by James Clear</p>
+                            <span class="book-status status-borrowed">Borrowed</span>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400" 
+                             alt="Project Hail Mary" class="book-image">
+                        <div class="book-info">
+                            <h3 class="book-title">Project Hail Mary</h3>
+                            <p class="book-author">by Andy Weir</p>
+                            <span class="book-status status-available">Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 LibraryHub. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
