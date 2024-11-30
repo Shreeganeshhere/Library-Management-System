@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index2.css">
+    {% load static %}
+    <link rel="stylesheet" href="/static/index2.css">
 </head>
 <body>
     <nav class="navbar">
@@ -20,7 +21,7 @@
                 <a href="#" class="nav-link">Search</a>
                 <a href="#" class="nav-link">Books</a>
                 <a href="#" class="nav-link">Account</a>
-                <button class="btn btn-primary" href="">Sign In</button>
+                <a href="{% url 'login:login' %}"><button class="btn btn-primary" href="">Sign In</button></a>
             </div>
             <button class="mobile-menu-btn">☰</button>
         </div>

@@ -5,9 +5,10 @@ from django.contrib.auth import logout
 #log out's the admin   
 def logout_user(request):
     logout(request)
-    return redirect('login')
+    return redirect('main')
 
 def home(request):
     return render(request, 'index2.html', {})
+
 
     
