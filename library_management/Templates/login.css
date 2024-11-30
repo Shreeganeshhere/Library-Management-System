@@ -1,0 +1,253 @@
+:root {
+    --primary-orange: #ff7849;
+    --light-orange: #fff1e6;
+    --dark-orange: #ff6b2b;
+    --text-dark: #1f2937;
+    --text-light: #4b5563;
+    --white: #ffffff;
+    --border-light: #ffd7c9;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.5;
+    height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+.split-layout {
+    display: flex;
+    height: 100vh;
+}
+
+.image-side {
+    display: none;
+    flex: 1;
+    background: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80') center/cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(255, 120, 73, 0.3), rgba(31, 41, 55, 0.7));
+}
+
+.quote {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+    color: var(--white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.quote h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.quote p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.login-side {
+    flex: 1;
+    background: linear-gradient(135deg, var(--light-orange) 0%, #ffedd5 100%);
+    overflow-y: auto;
+}
+
+.navbar {
+    padding: 1.5rem 2rem;
+}
+
+.nav-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.logo {
+    font-size: 1.75rem;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 5rem);
+    padding: 2rem;
+}
+
+.login-card {
+    background: var(--white);
+    border-radius: 1.5rem;
+    padding: 3rem;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 8px 16px rgba(255, 120, 73, 0.1);
+    border: 1px solid var(--border-light);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.login-header h1 {
+    color: var(--text-dark);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.login-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.form-group label {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-left: 0.25rem;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.25rem;
+    color: var(--text-light);
+    pointer-events: none;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem;
+    padding-right: 3rem;
+    border: 1.5px solid var(--border-light);
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    transition: var(--transition);
+    background-color: var(--white);
+}
+
+.form-group input::placeholder {
+    color: #94a3b8;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 4px rgba(255, 120, 73, 0.15);
+}
+
+.login-button {
+    background-color: var(--primary-orange);
+    color: var(--white);
+    padding: 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.button-icon {
+    transition: transform 0.2s ease;
+}
+
+.login-button:hover {
+    background-color: var(--dark-orange);
+    box-shadow: 0 4px 12px rgba(255, 120, 73, 0.25);
+    transform: translateY(-2px);
+}
+
+.login-button:hover .button-icon {
+    transform: translateX(4px);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+@media (min-width: 1024px) {
+    .image-side {
+        display: block;
+    }
+    
+    .login-card {
+        margin-right: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 2rem;
+        margin: 1rem;
+    }
+
+    .login-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .login-container {
+        padding: 1rem;
+    }
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.login-card {
+    animation: fadeIn 0.6s ease-out;
+}

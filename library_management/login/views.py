@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect # type: ignore
-from django.contrib.auth import login, authenticate # type: ignore
+from django.contrib.auth import login, authenticate, logout # type: ignore
 from django.contrib import messages # type: ignore
 from django.contrib.auth.forms import UserCreationForm # type: ignore
 # Create your views here.'
@@ -19,3 +19,8 @@ def login_user(request):
             return redirect('login')
     else:      
         return render(request,'login.html',{})
+    
+def logout_user(request):
+    logout(request)
+    return redirect('login')
+

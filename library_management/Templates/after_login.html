@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Console - LibraryHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="after_login.css">
+</head>
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="brand">
+                    <span class="logo">📚</span>
+                    <span>LibraryHub</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">📊</span>
+                    Dashboard
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📖</span>
+                    Books
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">👥</span>
+                    Members
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🔄</span>
+                    Circulation
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📝</span>
+                    Reports
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    Settings
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search books, members, or transactions...">
+                </div>
+                <div class="user-menu">
+                    <span class="notification-badge">🔔</span>
+                    <div class="user-profile">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" alt="Admin">
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon books">📚</div>
+                        <div class="stat-info">
+                            <h3>Total Books</h3>
+                            <p>12,458</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon members">👥</div>
+                        <div class="stat-info">
+                            <h3>Active Members</h3>
+                            <p>1,245</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon borrowed">📤</div>
+                        <div class="stat-info">
+                            <h3>Books Borrowed</h3>
+                            <p>284</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon overdue">⏰</div>
+                        <div class="stat-info">
+                            <h3>Overdue Books</h3>
+                            <p>23</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <section class="recent-activities">
+                        <h2>Recent Activities</h2>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <span class="activity-icon">📖</span>
+                                <div class="activity-details">
+                                    <p><strong>Book Borrowed:</strong> The Great Gatsby</p>
+                                    <span class="activity-time">2 minutes ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">👤</span>
+                                <div class="activity-details">
+                                    <p><strong>New Member:</strong> Sarah Johnson</p>
+                                    <span class="activity-time">15 minutes ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">📚</span>
+                                <div class="activity-details">
+                                    <p><strong>Book Returned:</strong> 1984</p>
+                                    <span class="activity-time">1 hour ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="popular-books">
+                        <h2>Popular Books</h2>
+                        <div class="book-list">
+                            <div class="book-item">
+                                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=100" alt="Book Cover">
+                                <div class="book-details">
+                                    <h4>Atomic Habits</h4>
+                                    <p>James Clear</p>
+                                    <span class="book-status available">Available</span>
+                                </div>
+                            </div>
+                            <div class="book-item">
+                                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=100" alt="Book Cover">
+                                <div class="book-details">
+                                    <h4>Deep Work</h4>
+                                    <p>Cal Newport</p>
+                                    <span class="book-status borrowed">Borrowed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

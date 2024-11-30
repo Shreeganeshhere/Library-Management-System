@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book - LibraryHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="add_books.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+            <span class="logo">📚</span>
+            <span>LibraryHub</span>
+        </a>
+        <div class="nav-links">
+            <a href="dashboard.html" class="back-link">
+                <span class="back-icon">←</span>
+                Back to Dashboard
+            </a>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Add New Book</h1>
+                <p>Enter the book details below</p>
+            </div>
+
+            <form class="book-form" method = 'post'>
+                <div class="form-group">
+                    <label for="bookName">Book Title</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="bookName" name="bookName" 
+                               placeholder="Enter the book title" required>
+                        <span class="input-icon">📖</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="author" name="author" 
+                               placeholder="Enter the author's name" required>
+                        <span class="input-icon">✍️</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <div class="input-wrapper">
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected>Select a subject</option>
+                            <option value="fiction">Fiction</option>
+                            <option value="non-fiction">Non-Fiction</option>
+                            <option value="science">Science</option>
+                            <option value="technology">Technology</option>
+                            <option value="history">History</option>
+                            <option value="philosophy">Philosophy</option>
+                            <option value="arts">Arts</option>
+                            <option value="biography">Biography</option>
+                        </select>
+                        <span class="input-icon">📚</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="isbn">ISBN (Optional)</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="isbn" name="isbn" 
+                               placeholder="Enter ISBN number">
+                        <span class="input-icon">🔢</span>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary">Clear Form</button>
+                    <button type="submit" class="btn-primary">
+                        <span>Add Book</span>
+                        <span class="button-icon">+</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
