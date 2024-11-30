@@ -7,7 +7,7 @@ def logout_user(request):
     logout(request)
     return redirect('login')
 
-def catalog(request):
-    return render(request, 'catalog.html', {})
+def home(request):
+    return render(request, 'index2.html', {})
 
     

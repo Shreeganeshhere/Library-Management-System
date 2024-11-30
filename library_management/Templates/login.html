@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LibraryHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="split-layout">
+        <div class="image-side">
+            <div class="overlay"></div>
+            <div class="quote">
+                <h2>"Libraries store the energy that fuels the imagination"</h2>
+                <p>- Sidney Sheldon</p>
+            </div>
+        </div>
+        <div class="login-side">
+            <nav class="navbar">
+                <a href="index.html" class="nav-brand">
+                    <span class="logo">📚</span>
+                    <span>LibraryHub</span>
+                </a>
+            </nav>
+            
+            <main class="login-container">
+                <div class="login-card">
+                    <div class="login-header">
+                        <h1>Welcome Back</h1>
+                        <p>Sign in to your library account</p>
+                    </div>
+                    <form class="login-form">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <div class="input-wrapper">
+                                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                                <span class="input-icon">👤</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="input-wrapper">
+                                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                                <span class="input-icon">🔒</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="login-button">
+                            <span>Sign In</span>
+                            <span class="button-icon">→</span>
+                        </button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
